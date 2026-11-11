@@ -663,51 +663,27 @@ p {
 }
 
 .thesis-art {
-  height: 390px;
   max-width: 480px;
   width: 100%;
+  margin: 0;
   justify-self: center;
-  position: relative;
-  color: var(--ink);
-  background:
-    radial-gradient(ellipse at 50% 46%, rgb(255 255 255 / 62%) 0, rgb(255 255 255 / 0%) 64%),
-    repeating-linear-gradient(0deg, transparent 0, transparent 39px, rgb(32 44 41 / 5%) 40px),
-    repeating-linear-gradient(90deg, transparent 0, transparent 39px, rgb(32 44 41 / 5%) 40px);
 }
 
-.ceiling-drawing {
-  position: absolute;
-  inset: 6% 1%;
-  width: 98%;
-  height: 86%;
-}
-
-.thesis-art-label,
-.thesis-art-caption,
-.thesis-art-index {
-  position: absolute;
-  color: var(--muted);
-  font-size: 8px;
-  letter-spacing: 0.09em;
-  line-height: 1.6;
-  text-transform: uppercase;
-}
-
-.thesis-art-label {
-  top: 16px;
-  left: 18px;
+.thesis-art img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
 }
 
 .thesis-art-caption {
-  right: 12px;
-  bottom: 8px;
-  color: var(--accent);
-  text-align: right;
-}
-
-.thesis-art-index {
-  top: 17px;
-  right: 18px;
+  margin-top: 11px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.6;
 }
 
 .thesis-details {
@@ -805,6 +781,91 @@ p {
   color: var(--muted);
   font-size: 10px;
   line-height: 1.8;
+}
+
+.thesis-gallery {
+  padding: 88px 7.5%;
+  border-top: 1px solid var(--line);
+}
+
+.thesis-gallery-header {
+  max-width: 940px;
+  margin-bottom: 38px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(200px, 0.8fr);
+  align-items: end;
+  gap: 6%;
+}
+
+.thesis-gallery-header .eyebrow {
+  margin-bottom: 20px;
+}
+
+.thesis-gallery-header h2 {
+  margin-bottom: 0;
+  font-family: var(--serif);
+  font-size: clamp(36px, 4vw, 53px);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.16;
+}
+
+.thesis-gallery-header h2 em {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.thesis-gallery-intro {
+  max-width: 390px;
+  margin: 0 0 4px;
+  color: #636b64;
+  font-size: 12px;
+  line-height: 1.85;
+}
+
+.thesis-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.thesis-gallery-card {
+  min-width: 0;
+  margin: 0;
+}
+
+.thesis-gallery-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  background: #fff;
+}
+
+.thesis-gallery-card figcaption {
+  padding-top: 14px;
+  display: grid;
+  gap: 5px;
+}
+
+.thesis-gallery-label {
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.thesis-gallery-card strong {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.thesis-gallery-credit {
+  color: var(--muted);
+  font-size: 10px;
 }
 
 .thesis-conclusion {
@@ -1026,8 +1087,8 @@ p {
     grid-template-columns: minmax(0, 1fr) minmax(265px, 0.8fr);
   }
 
-  .thesis-art {
-    height: 330px;
+  .thesis-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .thesis-study-intro {
@@ -1202,9 +1263,33 @@ p {
     font-size: 13px;
   }
 
+  .thesis-gallery {
+    padding-top: 66px;
+    padding-bottom: 66px;
+  }
+
   .thesis-art {
-    height: min(80vw, 340px);
     max-width: 400px;
+  }
+
+  .thesis-art-caption {
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .thesis-gallery-header {
+    margin-bottom: 25px;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .thesis-gallery-header h2 {
+    font-size: 40px;
+  }
+
+  .thesis-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 
   .thesis-details {

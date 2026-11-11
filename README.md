@@ -1,6 +1,6 @@
 # María Isabel Jurado del Prisco — personal website
 
-A lightweight, responsive portfolio site built with plain HTML and CSS for GitHub Pages. Includes an English-language overview of María Isabel's bachelor’s thesis.
+A lightweight, responsive portfolio site built with plain HTML and CSS for GitHub Pages. Includes an English-language overview of María Isabel's bachelor’s thesis, illustrated with selected original thesis figures. The thesis PDF itself is not hosted on the site.
 
 ## Run locally
 
